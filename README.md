@@ -6,7 +6,8 @@ The following technologies used in this project:
 - MVC Architecture
 - Data Binding
 - Kotlin
-- Koin DI
+- Kotlin Coroutines
+- Koin
 - Firebase
 - Glide
 - Layout Helpers (SDP & SSP)
