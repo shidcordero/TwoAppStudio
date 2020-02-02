@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="urlItemViewModel"
+            type="com.sample.testapplication.viewmodel.UrlItemViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{urlItemViewModel.isSelected() ? @drawable/selected_background : @drawable/ripple_background}"
+        android:padding="@dimen/_12sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardBackgroundColor="@color/color_accent"
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInsightAvatar"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="centerInside"
+                app:imageUrl="@{urlItemViewModel.url.imageLink}"
+                tools:src="@drawable/ic_broken_image" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:text="@{urlItemViewModel.url.name}"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cvImageContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Google"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@{urlItemViewModel.url.link}"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cvImageContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="www.google.com"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

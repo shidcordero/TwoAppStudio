@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "230115299343",
+    "firebase_url": "https://twoappstudio-b98c4.firebaseio.com",
+    "project_id": "twoappstudio-b98c4",
+    "storage_bucket": "twoappstudio-b98c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230115299343:android:0a84814177c628dfa7137a",
+        "android_client_info": {
+          "package_name": "com.sample.testapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230115299343-m9ads71fmh33cuejudm315ijcc68t6m7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF-m5rkenPrwehSX-OeoKUAQ_0LghyCiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230115299343-m9ads71fmh33cuejudm315ijcc68t6m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

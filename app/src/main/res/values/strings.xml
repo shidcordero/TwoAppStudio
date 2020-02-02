@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Test Application</string>
+    <string name="loading">Loading…</string>
+    <!--  Labels  -->
+    <string name="lm_ok">OK</string>
+    <string name="lm_cancel">Cancel</string>
+    <string name="lm_yes">Yes</string>
+    <string name="lm_no">No</string>
+    <string name="lm_close">Close</string>
+
+    <!--  Common Message  -->
+    <string name="cm_success">Success</string>
+    <string name="cm_confirmation">Confirmation</string>
+    <string name="cm_submit">Submit</string>
+    <string name="cm_input">Input</string>
+    <string name="cm_invalid">Invalid input</string>
+    <string name="cm_common_error">An error has occurred</string>
+    <string name="cm_common_error_desc">These errors are unknown to us. If you cannot proceed, please let us know immediately.</string>
+    <string name="cm_connection_error">Connection error</string>
+    <string name="cm_connection_error_desc">Please connect to internet and try again.</string>
+
+    <!--  Success Message  -->
+    <string name="sm_success_sign_up">Sign up successful. You can login your account.</string>
+
+    <!--  Error Message  -->
+    <string name="em_invalid_not_url">Entered value is not a url.</string>
+    <string name="em_invalid_url">Url entered is not a valid website.</string>
+
+    <!--  Hint  -->
+    <string name="hint_common_input">Enter data</string>
+    <string name="hint_input_url">e.g. https://2appstudio.com</string>
+
+    <string name="sort">Sort</string>
+    <string name="sort_ascending">Sort Ascending</string>
+    <string name="sort_descending">Sort Descending</string>
+    <string name="title_add_url">Add Website Link</string>
+    <string name="delete">Delete</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="confirm_delete_desc">Are you sure you want to delete the selected item?</string>
+</resources>
