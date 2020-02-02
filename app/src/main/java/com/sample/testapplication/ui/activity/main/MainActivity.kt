@@ -97,24 +97,28 @@ class MainActivity : BaseActivity() {
                     negativeLabel = R.string.lm_no))
             }
             android.R.id.home -> {
-                if (isEditMode){
-                    isEditMode = false
-
-                    var i = 0
-                    while (i < binding.rvUrlList.childCount) {
-                        val holder: UrlAdapter.UrlViewHolder =
-                            binding.rvUrlList.getChildViewHolder(binding.rvUrlList.getChildAt(i))
-                                    as UrlAdapter.UrlViewHolder
-                        holder.itemUrlBinding.urlItemViewModel?.isSelected?.set(false)
-                        ++i
-                    }
-                    invalidateOptionsMenu()
+                if (isEditMode) {
+                    backPress()
                 }
             }
             else -> return super.onOptionsItemSelected(item)
         }
 
         return true
+    }
+
+    private fun backPress(){
+        isEditMode = false
+
+        var i = 0
+        while (i < binding.rvUrlList.childCount) {
+            val holder: UrlAdapter.UrlViewHolder =
+                binding.rvUrlList.getChildViewHolder(binding.rvUrlList.getChildAt(i))
+                        as UrlAdapter.UrlViewHolder
+            holder.itemUrlBinding.urlItemViewModel?.isSelected?.set(false)
+            ++i
+        }
+        invalidateOptionsMenu()
     }
 
     private fun setupRecyclerViews() {
@@ -168,4 +172,10 @@ class MainActivity : BaseActivity() {
         invalidateOptionsMenu()
     }
 
+    override fun onBackPressed() {
+        if (isEditMode)
+            backPress()
+        else
+            super.onBackPressed()
+    }
 }
