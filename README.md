@@ -14,4 +14,3 @@ The following technologies used in this project:
 - Event Bus (Green Robot)
 - Material Dialog
 - Jsoup (web scraper)
-- Firebase Fi
